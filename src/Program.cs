@@ -1,3 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
-Console.WriteLine("Hello, World!");
+namespace Test
+{
+    public class Launcher
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello world!");
+        }
+    }
+}
