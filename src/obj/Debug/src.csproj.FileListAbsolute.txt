@@ -1,0 +1,6 @@
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\src.exe
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\src.pdb
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.csproj.AssemblyReference.cache
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.csproj.CoreCompileInputs.cache
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.exe
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.pdb
