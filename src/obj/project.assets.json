@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/home/simabogdan/.nuget/packages/": {}
+    "C:\\Users\\boogd\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/simabogdan/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/src.csproj",
+      "projectUniqueName": "C:\\Users\\boogd\\RiderProjects\\mpp-proiect-csharp-SimaBogdan\\src\\src.csproj",
       "projectName": "src",
-      "projectPath": "/home/simabogdan/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/src.csproj",
-      "packagesPath": "/home/simabogdan/.nuget/packages/",
-      "outputPath": "/home/simabogdan/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/obj/",
+      "projectPath": "C:\\Users\\boogd\\RiderProjects\\mpp-proiect-csharp-SimaBogdan\\src\\src.csproj",
+      "packagesPath": "C:\\Users\\boogd\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\boogd\\RiderProjects\\mpp-proiect-csharp-SimaBogdan\\src\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/simabogdan/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\boogd\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/simabogdan/.dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
