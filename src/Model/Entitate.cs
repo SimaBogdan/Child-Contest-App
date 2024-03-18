@@ -4,7 +4,7 @@ namespace src.Model
 {
     public class Entitate
     {
-        private int id;
+        private protected int id;
 
         public Entitate()
         {

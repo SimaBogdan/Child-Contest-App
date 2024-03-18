@@ -7,11 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="">
+    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="Modifications">
+      <change afterPath="$PROJECT_DIR$/Repository/DBUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Concurs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Concurs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/Entitate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Entitate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/IRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/IRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/MemoryRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/MemoryRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Participant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Participant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +25,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/boogd/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/Repository/MemoryRepo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/boogd/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/Repository/MemoryRepo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.050/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.10941/SortingTaskDbRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.11815/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.12332/ICrudRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.14956/MySqlConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.15624/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.1807/ConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.32032/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.36980/AbstractRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.38415/DBUtils.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.46289/Container.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/boogd/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/Model/Entitate.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -38,28 +51,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.src.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.src.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\boogd\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ],
+    "rider.external.source.directories": [
+      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\boogd\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="src" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -89,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710602852834</updated>
       <workItem from="1710602855304" duration="1176000" />
-      <workItem from="1710760162266" duration="925000" />
+      <workItem from="1710760162266" duration="8221000" />
     </task>
     <task id="LOCAL-00001" summary="I moved from Linux to Windows and this was just a test">
       <option name="closed" value="true" />
@@ -107,7 +123,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710603800914</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modifications">
+      <option name="closed" value="true" />
+      <created>1710761340894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710761340894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +142,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="I moved from Linux to Windows and this was just a test" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifications" />
   </component>
 </project>

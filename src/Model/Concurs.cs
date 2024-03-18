@@ -2,19 +2,22 @@
 
 namespace src.Model
 {
-    public class Concurs
+    public class Concurs : Entitate
     {
         private Proba proba;
         private Participant participant;
+        public int id { get; set; }
 
         public Concurs()
         {
+            this.id = 0;
             this.proba = new Proba();
             this.participant = new Participant();
         }
 
-        public Concurs(Proba proba, Participant participant)
+        public Concurs(int id,Proba proba, Participant participant)
         {
+            this.id = id;
             this.proba = proba;
             this.participant = participant;
         }
