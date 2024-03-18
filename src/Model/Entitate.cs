@@ -2,7 +2,7 @@
 
 namespace src.Model
 {
-    public abstract class Entitate
+    public class Entitate
     {
         private int id;
 
