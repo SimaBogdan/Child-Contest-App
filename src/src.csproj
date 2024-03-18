@@ -263,6 +263,7 @@
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\ThirdPartyNotices.txt" />
     </ItemGroup>
     <ItemGroup>
+      <None Include="app.config" />
       <None Include="packages.config" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
