@@ -261,6 +261,7 @@
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.xml" />
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\System.Threading.Tasks.Extensions.4.3.0.nupkg" />
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\ThirdPartyNotices.txt" />
+      <Content Include="project.db" />
     </ItemGroup>
     <ItemGroup>
       <None Include="app.config" />
