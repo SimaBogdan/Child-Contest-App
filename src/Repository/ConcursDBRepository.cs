@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using Mono.Data.Sqlite;
 using src.Repository;
 using src.Model;
 using log4net;
+using System.Linq;
+using log4net.Config;
 
 namespace src.Repository
 {

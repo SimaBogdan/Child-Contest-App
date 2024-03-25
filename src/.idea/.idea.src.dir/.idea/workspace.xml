@@ -7,54 +7,107 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="Tema saptaman 4">
-      <change afterPath="$PROJECT_DIR$/bin/Debug/Microsoft.Data.Sqlite.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/Microsoft.Data.Sqlite.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlCommand.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlCommandBuilder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlConnection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlConnectionStringBuilder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlDataAdapter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlDataReader.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlException.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlHelper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlParameter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlParameterCollection.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/MySqlTransaction.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Memory.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/Debug/log4net.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log4net.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../global.json" beforeDir="false" afterPath="$PROJECT_DIR$/../global.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/src.exe.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/Debug/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/obj/Debug/src.csproj.CopyComplete" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net20/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net20/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net20/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net40/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net40/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net40/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net45/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net45/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net45/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net451/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net451/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net451/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net46/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net46/x64/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/build/net46/x86/SQLite.Interop.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/buildTransitive/net20/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/buildTransitive/net40/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/buildTransitive/net45/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/buildTransitive/net451/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/buildTransitive/net46/Stub.System.Data.SQLite.Core.NetFramework.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net20/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net20/System.Data.SQLite.dll.altconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net20/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net40/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net40/System.Data.SQLite.dll.altconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net40/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net45/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net45/System.Data.SQLite.dll.altconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net45/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net451/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net451/System.Data.SQLite.dll.altconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net451/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net46/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net46/System.Data.SQLite.dll.altconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0/lib/net46/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.1.0.118.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.1.0.118.0/System.Data.SQLite.1.0.118.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Core.1.0.118.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Core.1.0.118.0/System.Data.SQLite.Core.1.0.118.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/System.Data.SQLite.Linq.1.0.118.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net20/app.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net20/web.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net40/app.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net40/web.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net45/app.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net45/web.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net451/app.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net451/web.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net46/app.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/content/net46/web.config.transform" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/lib/net20/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/lib/net40/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/lib/net45/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/lib/net451/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.Linq.1.0.118.0/lib/net46/System.Data.SQLite.Linq.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/.signature.p7s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/System.Data.SQLite.x64.1.0.118.0.nupkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net20/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net20/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net40/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net40/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net45/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net45/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net451/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net451/System.Data.SQLite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net46/System.Data.SQLite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/System.Data.SQLite.x64.1.0.118.0/lib/net46/System.Data.SQLite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/2805cf95-2968-41c6-8b89-39617e31e850.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/2805cf95-2968-41c6-8b89-39617e31e850/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/51fcd509-b853-4c76-9622-6624fe5fa4c3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/51fcd509-b853-4c76-9622-6624fe5fa4c3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/b59f8cb2-6eb0-48e1-a6d6-60487bfb7a69.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/b59f8cb2-6eb0-48e1-a6d6-60487bfb7a69/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBUtils/SqliteConnectionFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DBUtils/SqliteConnectionFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Concurs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Concurs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repository/ConcursDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ConcursDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/DBUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/DBUtils.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repository/ParticipantDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ParticipantDBRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repository/ProbaDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ProbaDBRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.config" beforeDir="false" afterPath="$PROJECT_DIR$/app.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/identifier.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/log4net.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/concurscopii.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/concurscopii.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log4net.config" beforeDir="false" afterPath="$PROJECT_DIR$/log4net.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/src.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/src.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net20/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net20/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net35/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net35/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net40-client/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net40-client/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net40/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net40/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net45/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/net45/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/netstandard1.3/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/netstandard1.3/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/netstandard2.0/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.16/lib/netstandard2.0/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net20-full/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net20-full/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net35-client/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net35-client/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net35-full/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net35-full/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net40-client/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net40-client/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net40-full/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net40-full/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net45-full/log4net.xml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/log4net.2.0.8/lib/net45-full/log4net.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/log4net.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,19 +119,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.050/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.10941/SortingTaskDbRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.11815/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.12332/ICrudRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.14956/MySqlConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.15624/SqliteConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.1807/ConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.32032/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.36980/AbstractRepository.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.38415/DBUtils.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa6404.46289/Container.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/boogd/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/Model/Concurs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/boogd/RiderProjects/mpp-proiect-csharp-SimaBogdan/src/Model/Entitate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7008.3663/.NETFramework,Version=v4.5.AssemblyAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa7008.9823/.NETFramework,Version=v4.5.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -88,36 +130,39 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2dmAOz9x0aGrTXBYjU26KZsE8lF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.src.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.src.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\boogd\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\boogd\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="src" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -150,7 +195,9 @@
       <workItem from="1710760162266" duration="8331000" />
       <workItem from="1710777653322" duration="2918000" />
       <workItem from="1710781406634" duration="1512000" />
-      <workItem from="1711357902356" duration="10850000" />
+      <workItem from="1711357902356" duration="10907000" />
+      <workItem from="1711371968156" duration="1806000" />
+      <workItem from="1711374485311" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="I moved from Linux to Windows and this was just a test">
       <option name="closed" value="true" />
@@ -208,7 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710780308581</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Tema sapt 4">
+      <option name="closed" value="true" />
+      <created>1711371918981</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371918981</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Tema sapt 4">
+      <option name="closed" value="true" />
+      <created>1711371939274</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711371939274</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +279,7 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="I moved from Linux to Windows and this was just a test" />
     <MESSAGE value="Commit" />
@@ -223,6 +287,7 @@
     <MESSAGE value="Tema Saptamana 4" />
     <MESSAGE value="Tema saptamana 4" />
     <MESSAGE value="Tema saptaman 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tema saptaman 4" />
+    <MESSAGE value="Tema sapt 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tema sapt 4" />
   </component>
 </project>

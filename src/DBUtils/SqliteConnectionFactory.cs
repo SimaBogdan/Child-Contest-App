@@ -2,6 +2,11 @@ using System;
 using System.Data;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data.SQLite;
+//using Mono.Data.Sqlite;
+using ConnectionFactory = src.DBUtils.ConnectionFactory;
+
+//using System.Data.SQLite;
 
 //using Mono.Data.Sqlite;
 namespace src.DBUtils
@@ -10,9 +15,8 @@ namespace src.DBUtils
     {
         public override IDbConnection createConnection(IDictionary<string,string> props)
         {
-            String connectionString = props["ConnectionString"];
-            Console.WriteLine("SQLite ---Se deschide o conexiune la  ... {0}", connectionString);
-            return new SqliteConnection(connectionString);
+            var connectionString = props["ConnectionString"];
+            return new SQLiteConnection(connectionString);
         }
     }
 }

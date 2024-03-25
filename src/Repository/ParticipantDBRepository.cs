@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using src.Repository;
 using src.Model;
 using log4net;
+using System.Linq;
+using log4net.Config;
 
 namespace src.Repository
 {

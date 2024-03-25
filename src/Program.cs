@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using src.Model;
 using src.Repository;
+using System.Linq;
 using log4net.Config;
 using log4net;
 
@@ -24,6 +24,7 @@ namespace src
         }
         public static void Main(string[] args)
         {
+            log4net.Config.XmlConfigurator.Configure();
             IDictionary<string, string> props = new SortedList<string, string>();
             props.Add("ConnectionString", getConnectionStringByName("concurscopiiDB"));
             var participantDbRepository = new ParticipantDBRepository(props);
@@ -39,15 +40,15 @@ namespace src
                 Console.WriteLine(participant);
             }
             
-            Console.WriteLine("Add: ");
+            // Console.WriteLine("Add: ");
 
-            var participantAdd = new Participant(2, "Pop", "Ana", 11, "desen");
-            participantDbRepository.add(participantAdd);
-            
-            foreach (var participant in participantDbRepository.findAll())
-            {
-                Console.WriteLine(participant);
-            }
+            // var participantAdd = new Participant(2, "Pop", "Ana", 11, "desen");
+            // participantDbRepository.add(participantAdd);
+            //
+            // foreach (var participant in participantDbRepository.findAll())
+            // {
+            //     Console.WriteLine(participant);
+            // }
             
         }
     }
