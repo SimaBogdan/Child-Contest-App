@@ -1,0 +1,10 @@
+2024-03-25 18:11:17,285 [1] INFO src.Repository.ParticipantDBRepository - creating ParticipantDbRepository 
+2024-03-25 18:11:17,314 [1] INFO src.Repository.ParticipantDBRepository - entering findOne with value 1
+2024-03-25 18:11:17,448 [1] INFO src.Repository.ParticipantDBRepository - exiting findOne with value Participant: 
+ Id: 1
+ Nume: Sima
+ Prenume: Bogdan
+ Varsta: 15
+ Proba: desen
+2024-03-25 18:11:17,454 [1] INFO src.Repository.ParticipantDBRepository - entering findAll
+2024-03-25 18:11:17,455 [1] INFO src.Repository.ParticipantDBRepository - exiting FindAll

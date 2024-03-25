@@ -7,7 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="Tema sapt 4" />
+    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,7 +102,8 @@
       <workItem from="1710781406634" duration="1512000" />
       <workItem from="1711357902356" duration="10907000" />
       <workItem from="1711371968156" duration="1806000" />
-      <workItem from="1711374485311" duration="3365000" />
+      <workItem from="1711374485311" duration="3386000" />
+      <workItem from="1711382584072" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="I moved from Linux to Windows and this was just a test">
       <option name="closed" value="true" />
@@ -185,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711377854729</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Tema sapt 4">
+      <option name="closed" value="true" />
+      <created>1711377873164</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711377873164</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

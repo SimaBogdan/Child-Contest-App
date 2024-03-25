@@ -24,7 +24,7 @@ namespace src
         }
         public static void Main(string[] args)
         {
-            log4net.Config.XmlConfigurator.Configure();
+            XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
             IDictionary<string, string> props = new SortedList<string, string>();
             props.Add("ConnectionString", getConnectionStringByName("concurscopiiDB"));
             var participantDbRepository = new ParticipantDBRepository(props);
