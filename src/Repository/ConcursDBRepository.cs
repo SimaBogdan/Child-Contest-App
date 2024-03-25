@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using Mono.Data.Sqlite;
 using src.Repository;
 using src.Model;
 using log4net;
@@ -12,63 +13,105 @@ namespace src.Repository
     {
         private DBUtils dbUtils;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(ConcursDBRepository));
-
+        IDictionary<string, string> props;
         private List<Concurs> concursuri = new List<Concurs>();
 
-        public ConcursDBRepository(DBUtils dbUtils)
+        public ConcursDBRepository(IDictionary<string, string> props)
         {
-            this.dbUtils = dbUtils;
+            Logger.Info("creating ConcursDBRepository ");
+            this.props = props;
         }
+
         public void add(Concurs concurs)
         {
-            Logger.TraceEntry("saving concurs {0}", concurs);
-            using (IDbConnection con = DBUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("insert into Concurs (id, proba, participant) values (@id, @proba, @participant)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@id", concurs.id);
-                        cmd.Parameters.AddWithValue("@proba", concurs.Proba);
-                        cmd.Parameters.AddWithValue("@participant", concurs.Participant);
+            Logger.InfoFormat("saving concurs", concurs);
+            var con = DBUtils.getConnection(props);
 
-                        int result = cmd.ExecuteNonQuery();
-                        Logger.Trace("saved {0} instances", result);
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "insert into Concurs values (@id_concurs, @id_participant, @id_proba)";
+
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_concurs";
+                paramId.Value = concurs.id;
+                comm.Parameters.Add(paramId);
+
+                var paramIdParticipant = comm.CreateParameter();
+                paramIdParticipant.ParameterName = "@id_participant";
+                paramIdParticipant.Value = concurs.IdParticipant;
+                comm.Parameters.Add(paramIdParticipant);
+
+                var paramIdProba = comm.CreateParameter();
+                paramIdProba.ParameterName = "@id_proba";
+                paramIdProba.Value = concurs.IdProba;
+                comm.Parameters.Add(paramIdProba);
+
+                var result = comm.ExecuteNonQuery();
+                Logger.InfoFormat("exiting add with value {0}", result);
+            }
+        }
+        
+        public Concurs findOne(int id)
+        {
+            Logger.InfoFormat("entering findOne with value {0}", id);
+            var con = DBUtils.getConnection(props);
+            
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select id_participant, id_proba from Concurs where id_concurs = @id_concurs";
+                
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_concurs";
+                paramId.Value = id;
+                comm.Parameters.Add(paramId);
+
+                using (var dataR = comm.ExecuteReader())
+                {
+                    if (dataR.Read())
+                    {
+                        var id_participant = dataR.GetInt32(0);
+                        var id_proba = dataR.GetInt32(1);
+                        
+                        var concurs = new Concurs(id, id_participant, id_proba);
+                        
+                        Logger.InfoFormat("exiting findOne with value {0}", concurs);
+                        return concurs;
                     }
                 }
-                catch (SqlException e)
+            }
+            Logger.InfoFormat("exiting findOne with value {0}", null);
+            return null;
+        }
+        
+        public IEnumerable<Concurs> findAll()
+        {
+            Logger.InfoFormat("entering findAll");
+            var con = DBUtils.getConnection(props);
+            IList<Concurs> concursList = new List<Concurs>();
+
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select * from Concurs";
+
+                using (var dataR = comm.ExecuteReader())
                 {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
+                    while (dataR.Read())
+                    {
+                        var id_concurs = dataR.GetInt32(0);
+                        var id_participant = dataR.GetInt32(1);
+                        var id_proba = dataR.GetInt32(2);
+                        
+                        var concurs = new Concurs(id_concurs, id_participant, id_proba);
+                        concursList.Add(concurs);
+                    }
                 }
             }
-            Logger.TraceExit();
+            Logger.InfoFormat("exiting FindAll");
+            return concursList;
         }
 
         public void update(Concurs concurs)
         {
-            Logger.TraceEntry("updating concurs {0}", concurs);
-            using (IDbConnection con = dbUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("update Concurs set proba = @proba, participant = @participant where id = @id", con))
-                    {
-                        cmd.Parameters.AddWithValue("@proba", concurs.Proba);
-                        cmd.Parameters.AddWithValue("@participant", concurs.Participant);
-                        cmd.Parameters.AddWithValue("@id", concurs.id);
-
-                        int result = cmd.ExecuteNonQuery();
-                        Logger.Trace("updated {0} instances", result);
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                }
-            }
-            Logger.TraceExit();
         }
 
         public void delete(int id)
@@ -78,114 +121,42 @@ namespace src.Repository
 
         public Concurs getById(int id)
         {
-            foreach (Concurs concurs in concursuri)
-            {
-                if (concurs.id == id)
-                    return concurs;
-            }
-            return null;
+            throw new NotImplementedException();
         }
 
         public int id { get; }
+
         public int size()
         {
-            return concursuri.Capacity;
-        }
-
-        public Proba getProbaById(int id)
-        {
-            Concurs concurs = getById(id);
-            if (concurs != null)
-            {
-                return concurs.Proba;
-            }
-
-            return default;
-        }
-        
-        public Participant getParticipantById(int id)
-        {
-            Concurs concurs = getById(id);
-            if (concurs != null)
-            {
-                return concurs.Participant;
-            }
-
-            return default;
+            throw new NotImplementedException();
         }
 
         public List<Concurs> getAll()
         {
-            Logger.TraceEntry();
-            List<Concurs> concursuri = new List<Concurs>();
-            using (IDbConnection con = dbUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("select * from concursuri", con))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                int id = reader.GetInt32(reader.GetOrdinal("id"));
-                                int id_proba = reader.GetInt32(reader.GetOrdinal("id_proba"));
-                                int id_participant = reader.GetInt32(reader.GetOrdinal("id_participant"));
-
-
-
-                                Concurs concurs = new Concurs(id, getProbaById(id_proba),
-                                    getParticipantById(id_participant));
-                                concursuri.Add(concurs);
-                            }
-                        }
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                }
-            }
-            Logger.TraceExit();
-            return concursuri;
-        }
-        
-        public Concurs findOne(int id)
-        {
-            Logger.TraceEntry();
-            using (IDbConnection con = dbUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("select * from Concurs where id = @id", con))
-                    {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                int id_proba = reader.GetInt32(reader.GetOrdinal("id_proba"));
-                                int id_participant = reader.GetInt32(reader.GetOrdinal("id_participant"));
-
-                                Concurs concurs = new Concurs(id, getProbaById(id_proba),
-                                    getParticipantById(id_participant));
-                                concurs.id = id;
-
-                                Logger.TraceExit();
-                                return concurs;
-                            }
-                        }
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                    Logger.TraceExit();
-                }
-            }
-            return null;
+            throw new NotImplementedException();
         }
     }
 }
+// {
+        //     Logger.TraceEntry("updating concurs {0}", concurs);
+        //     using (IDbConnection con = dbUtils.getConnection())
+        //     {
+        //         try
+        //         {
+        //             using (SqlCommand cmd = new SqlCommand("update Concurs set proba = @proba, participant = @participant where id = @id", con))
+        //             {
+        //                 cmd.Parameters.AddWithValue("@proba", concurs.Proba);
+        //                 cmd.Parameters.AddWithValue("@participant", concurs.Participant);
+        //                 cmd.Parameters.AddWithValue("@id", concurs.id);
+        //
+        //                 int result = cmd.ExecuteNonQuery();
+        //                 Logger.Trace("updated {0} instances", result);
+        //             }
+        //         }
+        //         catch (SqlException e)
+        //         {
+        //             Logger.Error(e);
+        //             Console.Error.WriteLine("db error " + e);
+        //         }
+        //     }
+        //     Logger.TraceExit();

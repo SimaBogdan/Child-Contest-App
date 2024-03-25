@@ -14,66 +14,83 @@ namespace src.Repository
         private DBUtils dbUtils;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(ProbaDBRepository));
         private List<Proba> probe = new List<Proba>();
-        public ProbaDBRepository(DBUtils dbUtils)
+        IDictionary<string, string> props;
+        public ProbaDBRepository(IDictionary<string, string> props)
         {
-            this.dbUtils = dbUtils;
+            Logger.Info("creating ProbaDBRepositroy");
+            this.props = props;
         }
         public void add(Proba proba)
         {
-            Logger.TraceEntry("saving proba {0}", proba);
-            using (IDbConnection con = DBUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("insert into Proba (id, tip_proba, varsta_min, varsta_max, nr_loc, locatie) values (@id, @tip_proba, @varsta_min, @varsta_max, @nr_loc, @locatie)", con))
-                    {
-                        cmd.Parameters.AddWithValue("@id", proba.IdProba);
-                        cmd.Parameters.AddWithValue("@tip_proba", proba.TipProba);
-                        cmd.Parameters.AddWithValue("@varsta_min", proba.VarstaMin);
-                        cmd.Parameters.AddWithValue("@varsta_max", proba.VarstaMax);
-                        cmd.Parameters.AddWithValue("@nr_loc", proba.NrLoc);
-                        cmd.Parameters.AddWithValue("@locatie", proba.Locatie);
+            Logger.InfoFormat("saving proba", proba);
+            var con = DBUtils.getConnection(props);
 
-                        int result = cmd.ExecuteNonQuery();
-                        Logger.Trace("saved {0} instances", result);
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                }
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "insert into Proba values (@id_proba, @tip_proba, @varsta_min, @varsta_max, @nr_loc, @locatie)";
+
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_proba";
+                paramId.Value = proba.IdProba;
+                comm.Parameters.Add(paramId);
+
+                var paramTipProba = comm.CreateParameter();
+                paramTipProba.ParameterName = "@tip_proba";
+                paramTipProba.Value = proba.TipProba;
+                comm.Parameters.Add(paramTipProba);
+
+                var paramVarstaMin = comm.CreateParameter();
+                paramVarstaMin.ParameterName = "@varsta_min";
+                paramVarstaMin.Value = proba.VarstaMin;
+                comm.Parameters.Add(paramVarstaMin);
+
+                var paramVarstaMax = comm.CreateParameter();
+                paramVarstaMax.ParameterName = "@varsta_max";
+                paramVarstaMax.Value = proba.VarstaMax;
+                comm.Parameters.Add(paramVarstaMax);
+
+                var paramNrLoc = comm.CreateParameter();
+                paramNrLoc.ParameterName = "@nr_loc";
+                paramNrLoc.Value = proba.NrLoc;
+                comm.Parameters.Add(paramNrLoc);
+
+                var paramLocatie = comm.CreateParameter();
+                paramLocatie.ParameterName = "@locatie";
+                paramLocatie.Value = proba.Locatie;
+                comm.Parameters.Add(paramLocatie);
+
+                var result = comm.ExecuteNonQuery();
+                Logger.InfoFormat("exiting add with value {0}", result);
             }
-            Logger.TraceExit();
         }
 
         public void update(Proba proba)
         {
-            Logger.TraceEntry("updating proba {0}", proba);
-            using (IDbConnection con = dbUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("update Proba set tip_proba = @tip_proba, varsta_min = @varsta_min, varsta_max = @varsta_max, nr_loc = @nr_loc, locatie = @locatie where id = @id", con))
-                    {
-                        cmd.Parameters.AddWithValue("@tip_proba", proba.TipProba);
-                        cmd.Parameters.AddWithValue("@varsta_min", proba.VarstaMin);
-                        cmd.Parameters.AddWithValue("@varsta_max", proba.VarstaMax);
-                        cmd.Parameters.AddWithValue("@nr_loc", proba.NrLoc);
-                        cmd.Parameters.AddWithValue("@locatie", proba.Locatie);
-                        cmd.Parameters.AddWithValue("@id", proba.IdProba);
-
-                        int result = cmd.ExecuteNonQuery();
-                        Logger.Trace("updated {0} instances", result);
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                }
-            }
-            Logger.TraceExit();
+            // Logger.TraceEntry("updating proba {0}", proba);
+            // using (IDbConnection con = dbUtils.getConnection())
+            // {
+            //     try
+            //     {
+            //         using (SqlCommand cmd = new SqlCommand("update Proba set tip_proba = @tip_proba, varsta_min = @varsta_min, varsta_max = @varsta_max, nr_loc = @nr_loc, locatie = @locatie where id = @id", con))
+            //         {
+            //             cmd.Parameters.AddWithValue("@tip_proba", proba.TipProba);
+            //             cmd.Parameters.AddWithValue("@varsta_min", proba.VarstaMin);
+            //             cmd.Parameters.AddWithValue("@varsta_max", proba.VarstaMax);
+            //             cmd.Parameters.AddWithValue("@nr_loc", proba.NrLoc);
+            //             cmd.Parameters.AddWithValue("@locatie", proba.Locatie);
+            //             cmd.Parameters.AddWithValue("@id", proba.IdProba);
+            //
+            //             int result = cmd.ExecuteNonQuery();
+            //             Logger.Trace("updated {0} instances", result);
+            //         }
+            //     }
+            //     catch (SqlException e)
+            //     {
+            //         Logger.Error(e);
+            //         Console.Error.WriteLine("db error " + e);
+            //     }
+            // }
+            // Logger.TraceExit();
         }
 
         public void delete(int id)
@@ -99,78 +116,106 @@ namespace src.Repository
 
         public List<Proba> getAll()
         {
-            Logger.TraceEntry();
-            List<Proba> probe = new List<Proba>();
-            using (IDbConnection con = dbUtils.getConnection())
-            {
-                try
-                {
-                    using (SqlCommand cmd = new SqlCommand("select * from probe", con))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                int id = reader.GetInt32(reader.GetOrdinal("id"));
-                                string tip_proba = reader.GetString(reader.GetOrdinal("tip_proba"));
-                                int varsta_min = reader.GetInt32(reader.GetOrdinal("varsta_min"));
-                                int varsta_max = reader.GetInt32(reader.GetOrdinal("varsta_max"));
-                                int nr_loc = reader.GetInt32(reader.GetOrdinal("nr_loc"));
-                                string locatie = reader.GetString(reader.GetOrdinal("locatie"));
-
-                                Proba proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
-                                probe.Add(proba);
-                            }
-                        }
-                    }
-                }
-                catch (SqlException e)
-                {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                }
-            }
-            Logger.TraceExit();
-            return probe;
+            // Logger.TraceEntry();
+            // List<Proba> probe = new List<Proba>();
+            // using (IDbConnection con = dbUtils.getConnection())
+            // {
+            //     try
+            //     {
+            //         using (SqlCommand cmd = new SqlCommand("select * from probe", con))
+            //         {
+            //             using (SqlDataReader reader = cmd.ExecuteReader())
+            //             {
+            //                 while (reader.Read())
+            //                 {
+            //                     int id = reader.GetInt32(reader.GetOrdinal("id"));
+            //                     string tip_proba = reader.GetString(reader.GetOrdinal("tip_proba"));
+            //                     int varsta_min = reader.GetInt32(reader.GetOrdinal("varsta_min"));
+            //                     int varsta_max = reader.GetInt32(reader.GetOrdinal("varsta_max"));
+            //                     int nr_loc = reader.GetInt32(reader.GetOrdinal("nr_loc"));
+            //                     string locatie = reader.GetString(reader.GetOrdinal("locatie"));
+            //
+            //                     Proba proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
+            //                     probe.Add(proba);
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     catch (SqlException e)
+            //     {
+            //         Logger.Error(e);
+            //         Console.Error.WriteLine("db error " + e);
+            //     }
+            // }
+            // Logger.TraceExit();
+            return null;
         }
         
         public Proba findOne(int id)
         {
-            Logger.TraceEntry();
-            using (IDbConnection con = dbUtils.getConnection())
+            Logger.InfoFormat("entering FindOne with value {0}", id);
+            var con = DBUtils.getConnection(props);
+            
+            using (var comm = con.CreateCommand())
             {
-                try
+                comm.CommandText = "select tip_proba, varsta_min, varsta_max, nr_loc, locatie from Proba where id_proba = @id_proba";
+                
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_proba";
+                paramId.Value = id;
+                comm.Parameters.Add(paramId);
+
+                using (var dataR = comm.ExecuteReader())
                 {
-                    using (SqlCommand cmd = new SqlCommand("select * from Proba where id = @id", con))
+                    if (dataR.Read())
                     {
-                        cmd.Parameters.AddWithValue("@id", id);
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                string tip_proba = reader.GetString(reader.GetOrdinal("tip_proba"));
-                                int varsta_min = reader.GetInt32(reader.GetOrdinal("varsta_min"));
-                                int varsta_max = reader.GetInt32(reader.GetOrdinal("varsta_max"));
-                                int nr_loc = reader.GetInt32(reader.GetOrdinal("nr_loc"));
-                                string locatie = reader.GetString(reader.GetOrdinal("locatie"));
-
-                                Proba proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
-                                proba.IdProba = id;
-
-                                Logger.TraceExit();
-                                return proba;
-                            }
-                        }
+                        var tip_proba = dataR.GetString(0);
+                        var varsta_min = dataR.GetInt32(1);
+                        var varsta_max = dataR.GetInt32(2);
+                        var nr_loc = dataR.GetInt32(3);
+                        var locatie = dataR.GetString(4);
+                        
+                        var proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
+                        
+                        Logger.InfoFormat("exiting FindOne with value {0}", proba);
+                        return proba;
                     }
                 }
-                catch (SqlException e)
+            }
+            Logger.InfoFormat("exiting FindOne with value {0}", null);
+            return null;
+        }
+        
+        public IEnumerable<Proba> findAll()
+        {
+            Logger.InfoFormat("entering findAll");
+            var con = DBUtils.getConnection(props);
+            IList<Proba> probas = new List<Proba>();
+            
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select * from Proba";
+
+                using (var dataR = comm.ExecuteReader())
                 {
-                    Logger.Error(e);
-                    Console.Error.WriteLine("db error " + e);
-                    Logger.TraceExit();
+                    while (dataR.Read())
+                    {
+                        var id = dataR.GetInt32(0);
+                        var tip_proba = dataR.GetString(1);
+                        var varsta_min = dataR.GetInt32(2);
+                        var varsta_max = dataR.GetInt32(3);
+                        var nr_loc = dataR.GetInt32(4);
+                        var locatie = dataR.GetString(5);
+                        
+                        var proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
+                        
+                        probas.Add(proba);
+                    }
                 }
             }
-            return null;
+
+            Logger.InfoFormat("exiting FindAll");
+            return probas;
         }
     }
 }

@@ -37,6 +37,9 @@
         <Reference Include="log4net, Version=2.0.16.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
           <HintPath>packages\log4net.2.0.16\lib\net35\log4net.dll</HintPath>
         </Reference>
+        <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+          <HintPath>packages\Mono.Data.Sqlite.1.0.61\lib\net35\Mono.Data.Sqlite.dll</HintPath>
+        </Reference>
         <Reference Include="System"/>
         <Reference Include="System.Configuration" />
         <Reference Include="System.Core"/>
@@ -261,7 +264,6 @@
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.xml" />
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\System.Threading.Tasks.Extensions.4.3.0.nupkg" />
       <Content Include="packages\System.Threading.Tasks.Extensions.4.3.0\ThirdPartyNotices.txt" />
-      <Content Include="project.db" />
     </ItemGroup>
     <ItemGroup>
       <None Include="app.config" />

@@ -4,39 +4,39 @@ namespace src.Model
 {
     public class Concurs : Entitate
     {
-        private Proba proba;
-        private Participant participant;
+        private int id_proba;
+        private int id_participant;
         public int id { get; set; }
 
         public Concurs()
         {
             this.id = 0;
-            this.proba = new Proba();
-            this.participant = new Participant();
+            this.id_proba = 0;
+            this.id_participant = 0;
         }
 
-        public Concurs(int id,Proba proba, Participant participant)
+        public Concurs(int id, int idParticipant, int idProba)
         {
             this.id = id;
-            this.proba = proba;
-            this.participant = participant;
+            this.id_participant = idParticipant;
+            this.id_proba = idProba;
         }
 
-        public Proba Proba
+        public int IdProba
         {
-            get { return proba; }
-            set { proba = value; }
+            get { return id_proba; }
+            set { id_proba = value; }
         }
 
-        public Participant Participant
+        public int IdParticipant
         {
-            get { return participant; }
-            set { participant = value; }
+            get { return id_participant; }
+            set { id_participant = value; }
         }
 
         public override string ToString()
         {
-            return $"Proba: " + this.proba.ToString() + $"\n Participant: " + this.participant.ToString();
+            return $"Proba: " + this.id_proba + $"\n Participant: " + this.id_participant;
         }
     }
 }

@@ -1,6 +1,8 @@
 using System;
 using System.Data;
 using System.Collections.Generic;
+using src.DBUtils;
+using static src.Repository.DBUtils;
 
 namespace src.Repository
 {
@@ -22,7 +24,7 @@ namespace src.Repository
         private static IDbConnection getNewConnection(IDictionary<string,string> props)
         {
 			
-            return ConnectionUtils.ConnectionFactory.getInstance().createConnection(props);
+            return ConnectionFactory.getInstance().createConnection(props);
 
 
         }
