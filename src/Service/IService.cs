@@ -3,7 +3,7 @@ using src.Model;
 
 namespace src.Service
 {
-    public interface IService<T>
+    public interface IService
     {
         Organizator findOneByUsernameAndPassword(string username, string parola);
         ICollection<Proba> getAllProba();
@@ -14,7 +14,10 @@ namespace src.Service
 
         ICollection<Concurs> findByParticipant(int id_participant);
 
-        T findOne(int id);
+        Participant findOne(int id);
+        Proba findOnProba(int id);
+        Organizator findOneOrganizator(int id);
+        Concurs findOneConcurs(int id);
 
         Participant findOneByNumeSiVarsta(string nume, string prenume, int varsta);
 

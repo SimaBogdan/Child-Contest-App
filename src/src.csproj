@@ -37,6 +37,7 @@
         <Reference Include="log4net, Version=2.0.16.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
           <HintPath>packages\log4net.2.0.16\lib\net35\log4net.dll</HintPath>
         </Reference>
+        <Reference Include="Microsoft.Build.Tasks" />
         <Reference Include="Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
           <HintPath>packages\Mono.Data.Sqlite.1.0.61\lib\net35\Mono.Data.Sqlite.dll</HintPath>
         </Reference>
@@ -50,12 +51,22 @@
         <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
           <HintPath>packages\System.Data.SQLite.Linq.1.0.118.0\lib\net20\System.Data.SQLite.Linq.dll</HintPath>
         </Reference>
+        <Reference Include="System.Drawing" />
+        <Reference Include="System.Drawing.Design" />
+        <Reference Include="System.Threading.Tasks.NET35, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>packages\System.Threading.Tasks.Unofficial.3.1\lib\net35\System.Threading.Tasks.NET35.dll</HintPath>
+        </Reference>
         <Reference Include="System.Web" />
+        <Reference Include="System.Windows.Forms" />
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="AccountForm.cs" />
+        <Compile Include="AccountForm.Designer.cs" />
         <Compile Include="DBUtils\ConnectionFactory.cs" />
         <Compile Include="DBUtils\SqliteConnectionFactory.cs" />
+        <Compile Include="LogInForm.cs" />
+        <Compile Include="LogInForm.Designer.cs" />
         <Compile Include="Model\Concurs.cs" />
         <Compile Include="Model\Entitate.cs" />
         <Compile Include="Model\Organizator.cs" />
@@ -283,6 +294,10 @@
     <ItemGroup>
       <None Include="app.config" />
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="AccountForm.resx" />
+      <EmbeddedResource Include="LogInForm.resx" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net20\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net20\Stub.System.Data.SQLite.Core.NetFramework.targets')" />

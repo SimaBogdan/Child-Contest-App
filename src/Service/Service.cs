@@ -3,7 +3,7 @@ using src.Model;
 
 namespace src.Service
 {
-    public class Service<T> where T : IService<T>
+    public class Service
     {
         ParticipantService participantService;
         OrganizatorService organizatorService;
