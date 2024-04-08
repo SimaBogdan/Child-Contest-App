@@ -22,6 +22,52 @@ namespace src.Repository
             Logger.Info("creating ProbaDBRepositroy");
             this.props = props;
         }
+        
+        public Proba findByVarstaSiTip(int vartsa_min, int varsta_max, string tip_proba)
+        {
+            Logger.InfoFormat("entering findByVarstaSiTip");
+            var con = DBUtils.getConnection(props);
+            IList<Proba> probas = new List<Proba>();
+
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText =
+                    "select * from Proba where varsta_min = @varsta_min and varsta_max = @varsta_max and tip_proba = @tip_proba";
+
+                var paramVarstaMin = comm.CreateParameter();
+                paramVarstaMin.ParameterName = "@varsta_min";
+                paramVarstaMin.Value = vartsa_min;
+                comm.Parameters.Add(paramVarstaMin);
+
+                var paramVarstaMax = comm.CreateParameter();
+                paramVarstaMax.ParameterName = "@varsta_max";
+                paramVarstaMax.Value = varsta_max;
+                comm.Parameters.Add(paramVarstaMax);
+
+                var paramTipProba = comm.CreateParameter();
+                paramTipProba.ParameterName = "@tip_proba";
+                paramTipProba.Value = tip_proba;
+                comm.Parameters.Add(paramTipProba);
+
+                using (var dataR = comm.ExecuteReader())
+                {
+                    if (dataR.Read())
+                    {
+                        var id = dataR.GetInt32(0);
+                        var nr_loc = dataR.GetInt32(1);
+                        var locatie = dataR.GetString(2);
+
+                        var proba = new Proba(id, tip_proba, vartsa_min, varsta_max, nr_loc, locatie);
+
+                        Logger.InfoFormat("exiting findByVarstaSiTip with value {0}", proba);
+                        return proba;
+                    }
+                }
+            }
+
+            Logger.InfoFormat("exiting findByVarstaSiTip with value {0}", null);
+            return null;
+        }
         public void add(Proba proba)
         {
             Logger.InfoFormat("saving proba", proba);

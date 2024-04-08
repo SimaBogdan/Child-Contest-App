@@ -23,6 +23,47 @@ namespace src.Repository
             Logger.Info("creating ParticipantDbRepository ");
             this.props = props;
         }
+        
+        public Participant findOneByNumeSiVarsta(string nume, string prenume, int varsta)
+        {
+            Logger.InfoFormat("entering findOneByNumeSiVarsta with values: nume={0}, prenume={1}, varsta={2}", nume, prenume, varsta);
+            var con = DBUtils.getConnection(props);
+
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select id_participant from Participant where nume = @nume and prenume = @prenume and varsta = @varsta";
+
+                var paramNume = comm.CreateParameter();
+                paramNume.ParameterName = "@nume";
+                paramNume.Value = nume;
+                comm.Parameters.Add(paramNume);
+
+                var paramPrenume = comm.CreateParameter();
+                paramPrenume.ParameterName = "@prenume";
+                paramPrenume.Value = prenume;
+                comm.Parameters.Add(paramNume);
+
+                var paramVarsta = comm.CreateParameter();
+                paramVarsta.ParameterName = "@varsta";
+                paramVarsta.Value = varsta;
+                comm.Parameters.Add(paramVarsta);
+
+                using (var dataR = comm.ExecuteReader())
+                {
+                    if (dataR.Read())
+                    {
+                        var id = dataR.GetInt32(0);
+                        var participant = new Participant(id, nume, prenume, varsta);
+
+                        Logger.InfoFormat("exiting FindOneByNameAndAge with value: {0}", participant);
+                        return participant;
+                    }
+                }
+            }
+
+            Logger.InfoFormat("exiting FindOneByNameAndAge with value: null");
+            return null;
+        }
 
         
         public void add(Participant participant)
@@ -32,7 +73,7 @@ namespace src.Repository
 
             using (var comm = con.CreateCommand())
             {
-                comm.CommandText = "insert into Participant values (@id_participant, @nume, @prenume, @varsta, @proba)";
+                comm.CommandText = "insert into Participant values (@id_participant, @nume, @prenume, @varsta)";
 
                 var paramId = comm.CreateParameter();
                 paramId.ParameterName = "@id_participant";
@@ -54,10 +95,10 @@ namespace src.Repository
                 paramVarsta.Value = participant.Varsta;
                 comm.Parameters.Add(paramVarsta);
 
-                var paramProba = comm.CreateParameter();
-                paramProba.ParameterName = "@proba";
-                paramProba.Value = participant.Proba;
-                comm.Parameters.Add(paramProba);
+                // var paramProba = comm.CreateParameter();
+                // paramProba.ParameterName = "@proba";
+                // paramProba.Value = participant.Proba;
+                // comm.Parameters.Add(paramProba);
 
                 var result = comm.ExecuteNonQuery();
                 Logger.InfoFormat("exiting add with value {0}", result);
@@ -158,7 +199,7 @@ namespace src.Repository
             
             using (var comm = con.CreateCommand())
             {
-                comm.CommandText = "select nume, prenume, varsta, proba from Participant where id_participant = @id_participant";
+                comm.CommandText = "select nume, prenume, varsta from Participant where id_participant = @id_participant";
                 
                 var paramId = comm.CreateParameter();
                 paramId.ParameterName = "@id_participant";
@@ -172,9 +213,9 @@ namespace src.Repository
                         var nume = dataR.GetString(0);
                         var prenume = dataR.GetString(1);
                         var varsta = dataR.GetInt32(2);
-                        var proba = dataR.GetString(3);
+                        //var proba = dataR.GetString(3);
                         
-                        var participant = new Participant(id, nume, prenume, varsta, proba);
+                        var participant = new Participant(id, nume, prenume, varsta);
                         
                         Logger.InfoFormat("exiting findOne with value {0}", participant);
                         return participant;
@@ -203,9 +244,9 @@ namespace src.Repository
                         var nume = dataR.GetString(1);
                         var prenume = dataR.GetString(2);
                         var varsta = dataR.GetInt32(3);
-                        var proba = dataR.GetString(4);
+                        //var proba = dataR.GetString(4);
 
-                        var participant = new Participant(id_participant, nume, prenume, varsta, proba);
+                        var participant = new Participant(id_participant, nume, prenume, varsta);
                         participants.Add(participant);
                     }
                 }

@@ -22,6 +22,74 @@ namespace src.Repository
             Logger.Info("creating ConcursDBRepository ");
             this.props = props;
         }
+        
+        public IEnumerable<Concurs> findByProba(int id_proba)
+        {
+            Logger.InfoFormat("entering findByProba");
+            var con = DBUtils.getConnection(props);
+            IList<Concurs> concursuri = new List<Concurs>();
+
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select * from Concurs where id_proba = @id_proba";
+
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_proba";
+                paramId.Value = id_proba;
+                comm.Parameters.Add(paramId);
+
+                using (var dataR = comm.ExecuteReader())
+                {
+                    while (dataR.Read())
+                    {
+                        var id = dataR.GetInt32(0);
+                        var idParticipant = dataR.GetInt32(1);
+                        var idOrganizator = dataR.GetInt32(3);
+
+                        var concurs = new Concurs(id, idParticipant, id_proba, idOrganizator);
+
+                        concursuri.Add(concurs);
+                    }
+                }
+            }
+
+            Logger.InfoFormat("exiting findByProba");
+            return concursuri;
+        }
+        
+        public IEnumerable<Concurs> findByParticipant(int id_participant)
+        {
+            Logger.InfoFormat("entering FindByParticipant");
+            var con = DBUtils.getConnection(props);
+            IList<Concurs> concursList = new List<Concurs>();
+
+            using (var comm = con.CreateCommand())
+            {
+                comm.CommandText = "select * from Concurs where id_participant = @id_participant";
+
+                var paramId = comm.CreateParameter();
+                paramId.ParameterName = "@id_participant";
+                paramId.Value = id_participant;
+                comm.Parameters.Add(paramId);
+
+                using (var dataR = comm.ExecuteReader())
+                {
+                    while (dataR.Read())
+                    {
+                        var id = dataR.GetInt32(0);
+                        var idProba = dataR.GetInt32(2);
+                        var idOrganizator = dataR.GetInt32(3);
+                        
+                        var concurs = new Concurs(id, id_participant, idProba, idOrganizator);
+
+                        concursList.Add(concurs);
+                    }
+                }
+            }
+
+            Logger.InfoFormat("exiting FindByParticipant");
+            return concursList;
+        }
 
         public void add(Concurs concurs)
         {
@@ -30,7 +98,7 @@ namespace src.Repository
 
             using (var comm = con.CreateCommand())
             {
-                comm.CommandText = "insert into Concurs values (@id_concurs, @id_participant, @id_proba)";
+                comm.CommandText = "insert into Concurs values (@id_concurs, @id_participant, @id_proba, @id_organizator)";
 
                 var paramId = comm.CreateParameter();
                 paramId.ParameterName = "@id_concurs";
@@ -46,6 +114,11 @@ namespace src.Repository
                 paramIdProba.ParameterName = "@id_proba";
                 paramIdProba.Value = concurs.IdProba;
                 comm.Parameters.Add(paramIdProba);
+
+                var paramIdOrg = comm.CreateParameter();
+                paramIdOrg.ParameterName = "@id_organizator";
+                paramIdOrg.Value = concurs.IdOrganizator;
+                comm.Parameters.Add(paramIdOrg);
 
                 var result = comm.ExecuteNonQuery();
                 Logger.InfoFormat("exiting add with value {0}", result);
@@ -72,8 +145,9 @@ namespace src.Repository
                     {
                         var id_participant = dataR.GetInt32(0);
                         var id_proba = dataR.GetInt32(1);
+                        var id_organizator = dataR.GetInt32(2);
                         
-                        var concurs = new Concurs(id, id_participant, id_proba);
+                        var concurs = new Concurs(id, id_participant, id_proba, id_organizator);
                         
                         Logger.InfoFormat("exiting findOne with value {0}", concurs);
                         return concurs;
@@ -101,8 +175,9 @@ namespace src.Repository
                         var id_concurs = dataR.GetInt32(0);
                         var id_participant = dataR.GetInt32(1);
                         var id_proba = dataR.GetInt32(2);
+                        var id_organizator = dataR.GetInt32(3);
                         
-                        var concurs = new Concurs(id_concurs, id_participant, id_proba);
+                        var concurs = new Concurs(id_concurs, id_participant, id_proba, id_organizator);
                         concursList.Add(concurs);
                     }
                 }

@@ -58,6 +58,7 @@
         <Compile Include="DBUtils\SqliteConnectionFactory.cs" />
         <Compile Include="Model\Concurs.cs" />
         <Compile Include="Model\Entitate.cs" />
+        <Compile Include="Model\Organizator.cs" />
         <Compile Include="Model\Participant.cs" />
         <Compile Include="Model\Proba.cs" />
         <Compile Include="Program.cs" />
@@ -65,12 +66,20 @@
         <Compile Include="Repository\ConcursDBRepository.cs" />
         <Compile Include="Repository\DBUtils.cs" />
         <Compile Include="Repository\IConcursRepository.cs" />
+        <Compile Include="Repository\IOrganizatorRepository.cs" />
         <Compile Include="Repository\IParticipantRepository.cs" />
         <Compile Include="Repository\IProbaRepository.cs" />
         <Compile Include="Repository\IRepo.cs" />
         <Compile Include="Repository\MemoryRepo.cs" />
+        <Compile Include="Repository\OrganizatorDBRepository.cs" />
         <Compile Include="Repository\ParticipantDBRepository.cs" />
         <Compile Include="Repository\ProbaDBRepository.cs" />
+        <Compile Include="Service\ConcursService.cs" />
+        <Compile Include="Service\IService.cs" />
+        <Compile Include="Service\OrganizatorService.cs" />
+        <Compile Include="Service\ParticipantService.cs" />
+        <Compile Include="Service\ProbaService.cs" />
+        <Compile Include="Service\Service.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="packages\log4net.2.0.8\lib\net20-full\log4net.dll" />

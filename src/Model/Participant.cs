@@ -7,7 +7,7 @@ namespace src.Model
         private string nume;
         private string prenume;
         private int varsta;
-        private string proba;
+        //private string proba;
         public int id { get; set; }
 
         public Participant()
@@ -16,16 +16,16 @@ namespace src.Model
             this.nume = null;
             this.prenume = null;
             this.varsta = 0;
-            this.proba = null;
+            //this.proba = null;
         }
 
-        public Participant(int id, string nume, string prenume, int varsta, string proba)
+        public Participant(int id, string nume, string prenume, int varsta)
         {
             this.id = id;
             this.nume = nume;
             this.prenume = prenume;
             this.varsta = varsta;
-            this.proba = proba;
+            //this.proba = proba;
         }
 
         public string Nume
@@ -46,11 +46,11 @@ namespace src.Model
             set { varsta = value; }
         }
 
-        public string Proba
-        {
-            get { return proba; }
-            set { proba = value; }
-        }
+        // public string Proba
+        // {
+        //     get { return proba; }
+        //     set { proba = value; }
+        // }
         // public string getNume()
         // {
         //     return this.nume;
@@ -81,15 +81,14 @@ namespace src.Model
         //     this.proba = proba;
         // }
 
-        public bool login(string nume, string prenume, int varsta, string proba)
-        {
-            return this.nume.Equals(nume) && this.prenume.Equals(prenume) && this.varsta.Equals(varsta) && this.proba.Equals(proba);
-        }
+        // public bool login(string nume, string prenume, int varsta, string proba)
+        // {
+        //     return this.nume.Equals(nume) && this.prenume.Equals(prenume) && this.varsta.Equals(varsta) && this.proba.Equals(proba);
+        // }
 
         public override string ToString()
         {
-            return $"Participant: " + $"\n Id: " + this.id + $"\n Nume: " + this.nume + $"\n Prenume: " + this.prenume + $"\n Varsta: " + this.varsta +
-                   $"\n Proba: " + this.proba;
+            return $"Participant: " + $"\n Id: " + this.id + $"\n Nume: " + this.nume + $"\n Prenume: " + this.prenume + $"\n Varsta: " + this.varsta;
         }
     }
 }

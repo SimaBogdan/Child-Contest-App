@@ -26,7 +26,7 @@ namespace src
         {
             XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
             IDictionary<string, string> props = new SortedList<string, string>();
-            props.Add("ConnectionString", getConnectionStringByName("concurscopiiDB"));
+            props.Add("ConnectionString", getConnectionStringByName("concurscopii.db"));
             var participantDbRepository = new ParticipantDBRepository(props);
             
             Console.WriteLine("FindOne: ");
@@ -39,7 +39,12 @@ namespace src
             {
                 Console.WriteLine(participant);
             }
+
+            var organizatorDbRepository = new OrganizatorDBRepository(props);
             
+            Console.WriteLine("FindOne: ");
+            
+            Console.WriteLine(organizatorDbRepository.findOne(1));
             // Console.WriteLine("Add: ");
 
             // var participantAdd = new Participant(2, "Pop", "Ana", 11, "desen");
@@ -49,7 +54,7 @@ namespace src
             // {
             //     Console.WriteLine(participant);
             // }
-            
+
         }
     }
 }
