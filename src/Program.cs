@@ -37,8 +37,11 @@ namespace src
             props.Add("ConnectionString", getConnectionStringByName("concurscopii.db"));
             var participantDbRepository = new ParticipantDBRepository(props);
             var participantService = new ParticipantService(participantDbRepository);
+            // Console.WriteLine(participantDbRepository.findOne(1));
+            // Console.WriteLine(participantDbRepository.findOneByNumeSiVarsta("Sima", "Bogdan", 15));
 
             var probaDbRepo = new ProbaDBRepository(props);
+            //Console.WriteLine(probaDbRepo.findByVarstaSiTip(6,8,"desen"));
             var probaServ = new ProbaService(probaDbRepo);
 
             var concursRepo = new ConcursDBRepository(props);

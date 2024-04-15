@@ -23,7 +23,7 @@ namespace src.Repository
             this.props = props;
         }
         
-        public Proba findByVarstaSiTip(int vartsa_min, int varsta_max, string tip_proba)
+        public Proba findByVarstaSiTip(int varsta_min, int varsta_max, string tip_proba)
         {
             Logger.InfoFormat("entering findByVarstaSiTip");
             var con = DBUtils.getConnection(props);
@@ -36,7 +36,7 @@ namespace src.Repository
 
                 var paramVarstaMin = comm.CreateParameter();
                 paramVarstaMin.ParameterName = "@varsta_min";
-                paramVarstaMin.Value = vartsa_min;
+                paramVarstaMin.Value = varsta_min;
                 comm.Parameters.Add(paramVarstaMin);
 
                 var paramVarstaMax = comm.CreateParameter();
@@ -53,11 +53,11 @@ namespace src.Repository
                 {
                     if (dataR.Read())
                     {
-                        var id = dataR.GetInt32(0);
-                        var nr_loc = dataR.GetInt32(1);
-                        var locatie = dataR.GetString(2);
+                        var id = dataR.GetInt32(dataR.GetOrdinal("id_proba"));
+                        var nr_loc = dataR.GetInt32(dataR.GetOrdinal("nr_loc"));
+                        var locatie = dataR.GetString(dataR.GetOrdinal("locatie"));
 
-                        var proba = new Proba(id, tip_proba, vartsa_min, varsta_max, nr_loc, locatie);
+                        var proba = new Proba(id, tip_proba, varsta_min, varsta_max, nr_loc, locatie);
 
                         Logger.InfoFormat("exiting findByVarstaSiTip with value {0}", proba);
                         return proba;
@@ -68,6 +68,7 @@ namespace src.Repository
             Logger.InfoFormat("exiting findByVarstaSiTip with value {0}", null);
             return null;
         }
+
         public void add(Proba proba)
         {
             Logger.InfoFormat("saving proba", proba);

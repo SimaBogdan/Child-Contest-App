@@ -41,7 +41,7 @@ namespace src.Repository
                 var paramPrenume = comm.CreateParameter();
                 paramPrenume.ParameterName = "@prenume";
                 paramPrenume.Value = prenume;
-                comm.Parameters.Add(paramNume);
+                comm.Parameters.Add(paramPrenume);
 
                 var paramVarsta = comm.CreateParameter();
                 paramVarsta.ParameterName = "@varsta";
