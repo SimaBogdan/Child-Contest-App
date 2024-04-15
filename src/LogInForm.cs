@@ -46,13 +46,13 @@ namespace src
         {
             var username = usernameTextBox.Text;
             var password = passwordTextBox.Text;
-            var hashedPassword = hashPassword(password);
+            //var hashedPassword = hashPassword(password);
             
             Console.WriteLine(username);
             Console.WriteLine(password);
-            Console.WriteLine(hashedPassword);
+            //Console.WriteLine(hashedPassword);
 
-            var organizator = _service.findOneByUsernameAndPassword(username, hashedPassword);
+            var organizator = _service.findOneByUsernameAndPassword(username, password);
 
             if (organizator != null)
             {

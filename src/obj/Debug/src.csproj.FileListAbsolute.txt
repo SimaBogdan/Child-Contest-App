@@ -11,3 +11,11 @@ C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\System.
 C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\log4net.xml
 C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\System.Data.SQLite.xml
 C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.csproj.CopyComplete
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.AccountForm.resources
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.LogInForm.resources
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.RegisterForm.resources
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.SearchForm.resources
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\obj\Debug\src.csproj.GenerateResource.cache
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\System.Threading.Tasks.NET35.dll
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\boogd\RiderProjects\mpp-proiect-csharp-SimaBogdan\src\bin\Debug\System.Threading.Tasks.NET35.pdb

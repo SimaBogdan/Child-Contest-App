@@ -3,12 +3,12 @@ using src.Model;
 
 namespace src.Service
 {
-    public class Service
+    public class Service : IService
     {
-        ParticipantService participantService;
-        OrganizatorService organizatorService;
-        ProbaService probaService;
-        ConcursService concursService;
+        private readonly ParticipantService participantService;
+        private readonly OrganizatorService organizatorService;
+        private readonly ProbaService probaService;
+        private readonly ConcursService concursService;
 
         public Service(ParticipantService participantService, OrganizatorService organizatorService, ProbaService probaService, ConcursService concursService)
         {
@@ -46,6 +46,21 @@ namespace src.Service
         public Participant findOne(int id)
         {
             return participantService.findOne(id);
+        }
+
+        public Proba findOnProba(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Organizator findOneOrganizator(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Concurs findOneConcurs(int id)
+        {
+            throw new System.NotImplementedException();
         }
 
         public Participant findOneByNumeSiVarsta(string nume, string prenume, int varsta)

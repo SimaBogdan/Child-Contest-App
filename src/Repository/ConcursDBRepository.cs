@@ -10,7 +10,7 @@ using log4net.Config;
 
 namespace src.Repository
 {
-    public class ConcursDBRepository : IRepo<Concurs>
+    public class ConcursDBRepository : IConcursRepository<Concurs>
     {
         private DBUtils dbUtils;
         private static readonly ILog Logger = LogManager.GetLogger(typeof(ConcursDBRepository));

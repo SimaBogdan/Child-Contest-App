@@ -1,0 +1,18 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005Cboogd_005CRiderProjects_005Cmpp_002Dproiect_002Dcsharp_002DSimaBogdan_005Csrc_005Cbin_005CDebug_005CMicrosoft_002EData_002ESqlite_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005Cboogd_005CRiderProjects_005Cmpp_002Dproiect_002Dcsharp_002DSimaBogdan_005Csrc_005Cbin_005CDebug_005CMicrosoft_002EData_002ESqlite_002Exml/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=C_003A_005CUsers_005Cboogd_005CRiderProjects_005Cmpp_002Dproiect_002Dcsharp_002DSimaBogdan_005Csrc_005Cbin_005CDebug_005Csqlite3_002Edll/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FAccountForm/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FLogInForm/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FRegisterForm/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=src_002FSearchForm/@EntryIndexedValue">True</s:Boolean>
+	
+	
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>

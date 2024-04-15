@@ -6,6 +6,10 @@ using src.Repository;
 using System.Linq;
 using log4net.Config;
 using log4net;
+using System.Threading.Tasks;
+//using System.Web.Instrumentation;
+using System.Windows.Forms;
+using src.Service;
 
 namespace src
 {
@@ -22,29 +26,47 @@ namespace src
 
             return returnValue;
         }
+        
+        [STAThread]
         public static void Main(string[] args)
         {
             XmlConfigurator.Configure(new System.IO.FileInfo("log4net.config"));
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             IDictionary<string, string> props = new SortedList<string, string>();
             props.Add("ConnectionString", getConnectionStringByName("concurscopii.db"));
             var participantDbRepository = new ParticipantDBRepository(props);
-            
-            Console.WriteLine("FindOne: ");
-            
-            Console.WriteLine(participantDbRepository.findOne(1));
+            var participantService = new ParticipantService(participantDbRepository);
 
-            Console.WriteLine("FindAll: ");
+            var probaDbRepo = new ProbaDBRepository(props);
+            var probaServ = new ProbaService(probaDbRepo);
 
-            foreach (var participant in participantDbRepository.findAll())
-            {
-                Console.WriteLine(participant);
-            }
+            var concursRepo = new ConcursDBRepository(props);
+            var concursServ = new ConcursService(concursRepo);
+            
+            // Console.WriteLine("FindOne: ");
+            //
+            // Console.WriteLine(participantDbRepository.findOne(1));
+            //
+            // Console.WriteLine("FindAll: ");
+            //
+            // foreach (var participant in participantDbRepository.findAll())
+            // {
+            //     Console.WriteLine(participant);
+            // }
+            
+            
 
             var organizatorDbRepository = new OrganizatorDBRepository(props);
+            var orgServ = new OrganizatorService(organizatorDbRepository);
             
-            Console.WriteLine("FindOne: ");
+            var service = new Service.Service(participantService, orgServ, probaServ, concursServ);
             
-            Console.WriteLine(organizatorDbRepository.findOne(1));
+            Application.Run(new LogInForm(service));
+
+            // Console.WriteLine("FindOne: ");
+            //
+            // Console.WriteLine(organizatorDbRepository.findOne(1));
             // Console.WriteLine("Add: ");
 
             // var participantAdd = new Participant(2, "Pop", "Ana", 11, "desen");
