@@ -1103,3 +1103,37 @@
 2024-04-15 19:01:55,760 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
 2024-04-15 19:01:55,760 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
 2024-04-15 19:01:55,761 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:30,097 [1] INFO src.Repository.ParticipantDBRepository - creating ParticipantDbRepository 
+2024-04-19 19:47:30,117 [1] INFO src.Repository.ProbaDBRepository - creating ProbaDBRepositroy
+2024-04-19 19:47:30,117 [1] INFO src.Repository.ConcursDBRepository - creating ConcursDBRepository 
+2024-04-19 19:47:30,118 [1] INFO src.Repository.OrganizatorDBRepository - creating OrganizatorDBRepository 
+2024-04-19 19:47:35,625 [1] INFO src.Repository.OrganizatorDBRepository - entering findOneByUsernameAndPassword with values: username=sima
+2024-04-19 19:47:35,826 [1] INFO src.Repository.OrganizatorDBRepository - exiting findOneByUsernameAndPassword with value: id_org: 1nume: Simaprenume: Bogdanusername: simaparola: da
+2024-04-19 19:47:35,875 [1] INFO src.Repository.ProbaDBRepository - entering findAll
+2024-04-19 19:47:35,876 [1] INFO src.Repository.ProbaDBRepository - exiting FindAll
+2024-04-19 19:47:35,913 [1] INFO src.Repository.ConcursDBRepository - entering findByProba
+2024-04-19 19:47:35,915 [1] INFO src.Repository.ConcursDBRepository - exiting findByProba
+2024-04-19 19:47:35,917 [1] INFO src.Repository.ConcursDBRepository - entering findByProba
+2024-04-19 19:47:35,917 [1] INFO src.Repository.ConcursDBRepository - exiting findByProba
+2024-04-19 19:47:35,918 [1] INFO src.Repository.ConcursDBRepository - entering findByProba
+2024-04-19 19:47:35,918 [1] INFO src.Repository.ConcursDBRepository - exiting findByProba
+2024-04-19 19:47:35,920 [1] INFO src.Repository.ParticipantDBRepository - entering findAll
+2024-04-19 19:47:35,921 [1] INFO src.Repository.ParticipantDBRepository - exiting FindAll
+2024-04-19 19:47:35,930 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,931 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,931 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,931 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,931 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,932 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,932 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,932 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,932 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,932 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,934 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,934 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,934 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,934 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,935 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,935 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant
+2024-04-19 19:47:35,936 [1] INFO src.Repository.ConcursDBRepository - entering FindByParticipant
+2024-04-19 19:47:35,936 [1] INFO src.Repository.ConcursDBRepository - exiting FindByParticipant

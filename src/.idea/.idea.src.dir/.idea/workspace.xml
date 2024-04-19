@@ -7,19 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="saptamana 6">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/51fcd509-b853-4c76-9622-6624fe5fa4c3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/dataSources/51fcd509-b853-4c76-9622-6624fe5fa4c3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.src.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/ParticipantDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ParticipantDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repository/ProbaDBRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repository/ProbaDBRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/concurscopii.db" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/concurscopii.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/myapp.log" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/myapp.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/src.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/src.exe" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/src.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/src.pdb" afterDir="false" />
-    </list>
+    <list default="true" id="c1c96fe3-83a8-47ad-8330-d9adbd9bb2e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,18 +16,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SimaBogdan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SimaBogdan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mpp-at-cs-ubbcluj-ro/mpp-proiect-csharp-SimaBogdan.git",
-    "accountId": "a8b601d6-6c83-4ad0-aa89-104dd69a247d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mpp-at-cs-ubbcluj-ro/mpp-proiect-csharp-SimaBogdan.git&quot;,
+    &quot;accountId&quot;: &quot;a8b601d6-6c83-4ad0-aa89-104dd69a247d&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Global.asax" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NLog.config" root0="SKIP_HIGHLIGHTING" />
@@ -60,32 +48,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.src.executor": "Run",
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.src.executor&quot;: &quot;Run&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\boogd\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\boogd\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\boogd\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="src" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -125,7 +113,7 @@
       <workItem from="1712565152438" duration="2930000" />
       <workItem from="1712569277782" duration="12505000" />
       <workItem from="1713098814405" duration="505000" />
-      <workItem from="1713099707377" duration="15260000" />
+      <workItem from="1713099707377" duration="15549000" />
     </task>
     <task id="LOCAL-00001" summary="I moved from Linux to Windows and this was just a test">
       <option name="closed" value="true" />
@@ -263,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713185843554</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="interfata grafica c#">
+      <option name="closed" value="true" />
+      <created>1713196953814</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713196953814</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +278,7 @@
     <MESSAGE value="Tema saptaman 4" />
     <MESSAGE value="Tema sapt 4" />
     <MESSAGE value="saptamana 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="saptamana 6" />
+    <MESSAGE value="interfata grafica c#" />
+    <option name="LAST_COMMIT_MESSAGE" value="interfata grafica c#" />
   </component>
 </project>
